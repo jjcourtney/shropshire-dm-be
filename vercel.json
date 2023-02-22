@@ -5,10 +5,10 @@
       "use": "@vercel/node"
     }
   ],
-
-  "headers": [
+  "routes": [
     {
-      "source": "/api/(.*)",
+      "src": "/(.*)",
+      "dest": "index.js",
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
     }
   ]
