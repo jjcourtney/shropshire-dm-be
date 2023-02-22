@@ -518,7 +518,7 @@ const air = [{
     ]
 }]
 
-export default {
+export const vehicleData = {
     mounts,
     land,
     water,

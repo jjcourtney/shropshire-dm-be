@@ -401,7 +401,7 @@ const wonderousItems = [{
 }]
 
 
-export default {
+export const magicItems = {
     itemOfMagic,
     cursedItems,
     itemsForCombat,
