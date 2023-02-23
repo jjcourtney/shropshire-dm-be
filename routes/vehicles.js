@@ -1,13 +1,9 @@
 import { Router } from "express";
 
 import { vehicleData } from "../data/vehicles.js";
+import { convertToHumanReadable, convertToallLowerNoSpaces } from "../utils/stringManipulation.js";
 
 const vehiclesRoute = Router();
-
-const convertToHumanReadable = (camelCaseString) => {
-    const humanReadable = camelCaseString.match(/[A-Za-z][a-z]*/g).join(" ");
-    return humanReadable.charAt(0).toUpperCase() + humanReadable.slice(1);
-}
 
 const getVehiclesByName = name => {
     const items = []
@@ -33,11 +29,10 @@ vehiclesRoute.get("/", (req, res) => {
 });
 
 
-
 vehiclesRoute.get("/type/:type", (req, res) => {
 
     const { type } = req.params
-    const items = vehicleData[type]
+    const items = vehicleData[convertToallLowerNoSpaces(type)];
 
     if (items) {
         res.json(items);
@@ -48,7 +43,6 @@ vehiclesRoute.get("/type/:type", (req, res) => {
 });
 
 vehiclesRoute.get("/types", (req, res) => {
-    console.log("types");
     const namesArray = [];
     for (const vehicle in vehicleData) {
         const humanReadable = convertToHumanReadable(vehicle);
