@@ -7,3 +7,12 @@ export const convertToHumanReadable = (camelCaseString) => {
 export const convertToallLowerNoSpaces = (rawString) => {
     return rawString.split(" ").join("").toLowerCase();
 }
+
+export const convertToCamelCase = (rawString) => {
+    return rawString.split(" ").map((word, index) => {
+        if (index === 0) {
+            return word.toLowerCase();
+        }
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }).join("");
+}

@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import { vehicleData } from "../data/vehicles.js";
-import { convertToHumanReadable, convertToallLowerNoSpaces } from "../utils/stringManipulation.js";
+import { convertToHumanReadable, convertToCamelCase } from "../utils/stringManipulation.js";
 
 const vehiclesRoute = Router();
 
@@ -32,7 +32,7 @@ vehiclesRoute.get("/", (req, res) => {
 vehiclesRoute.get("/type/:type", (req, res) => {
 
     const { type } = req.params
-    const items = vehicleData[convertToallLowerNoSpaces(type)];
+    const items = vehicleData[convertToCamelCase(type)];
 
     if (items) {
         res.json(items);

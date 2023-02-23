@@ -402,8 +402,8 @@ const wonderousItems = [{
 
 
 export const magicItems = {
-    itemsofmagic: itemsOfMagic,
-    curseditems: cursedItems,
-    itemsforcombat: itemsForCombat,
-    wonderousitems: wonderousItems
+    itemsOfMagic,
+    cursedItems,
+    itemsForCombat,
+    wonderousItems
 }

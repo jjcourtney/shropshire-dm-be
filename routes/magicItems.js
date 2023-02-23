@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import { magicItems } from "../data/magicItems.js";
-import { convertToHumanReadable, convertToallLowerNoSpaces } from "../utils/stringManipulation.js";
+import { convertToHumanReadable, convertToCamelCase } from "../utils/stringManipulation.js";
 
 const magicItemsRoute = Router();
 
@@ -31,7 +31,7 @@ magicItemsRoute.get("/", (req, res) => {
 magicItemsRoute.get("/type/:type", (req, res) => {
 
     const { type } = req.params
-    const items = magicItems[convertToallLowerNoSpaces(type)];
+    const items = magicItems[convertToCamelCase(type)];
 
     if (items) {
         res.json(items);
