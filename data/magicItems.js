@@ -1,4 +1,4 @@
-const itemOfMagic = [
+const itemsOfMagic = [
     {
         card: "Ace",
         name: "A scroll",
@@ -402,8 +402,8 @@ const wonderousItems = [{
 
 
 export const magicItems = {
-    itemOfMagic,
-    cursedItems,
-    itemsForCombat,
-    wonderousItems
+    itemsofmagic: itemsOfMagic,
+    curseditems: cursedItems,
+    itemsforcombat: itemsForCombat,
+    wonderousitems: wonderousItems
 }
