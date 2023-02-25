@@ -42,7 +42,7 @@ Returns all vehicles of a given type
 ]
 ```
 
-### GET `/api/vehicles/types`
+### GET `/api/vehicles/subtype`
 
 Returns all vehicles types
 
