@@ -1,5 +1,7 @@
-const mounts = [{
+const vehicles = [{
     card: "Ace",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Boblin",
     desc: [
         "Boblin the goblin can serve as a mount for any Medium or smaller creature. No no, Boblin insists. Whenever you intend to travel any distance exceeding 1 mile, make a Wisdom saving throw (DC 12). On a failure, you must ride on Boblin’s shoulders.",
@@ -7,6 +9,8 @@ const mounts = [{
 },
 {
     card: "2",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Goatbot",
     desc: [
         "The goat is a construct.",
@@ -16,6 +20,8 @@ const mounts = [{
 },
 {
     card: "3",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Bucking Bronco",
     desc: [
         "This mule is an aberration. It seems perfectly natural to anyone who observes it without Truesight, but those who do see a spiralling twisted mass of limbs that end in savage hooves. The mule’s hoof attack has a reach of 30ft, and the mule has no limit to the number of reactions it can take. The mule kicks a creature within reach as a reaction in response to:",
@@ -31,6 +37,8 @@ const mounts = [{
 },
 {
     card: "4",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Pallas of Stone",
     desc: [
         "A large, dust - coloured statue of a feral and angry looking cat.The statue is an earth elemental that can be used as a mount for a Medium or smaller creature, and has a speed of 40ft.and a climb speed of 30ft.",
@@ -40,6 +48,8 @@ const mounts = [{
 },
 {
     card: "5",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Head Burier",
     desc: [
         "The Head Burier uses the statistics for an Axe Beak, except that it has a burrow speed of 30ft.and while it is being ridden it can take a creature with it underground without difficulty.",
@@ -48,6 +58,8 @@ const mounts = [{
 },
 {
     card: "6",
+    type: "vehicles",
+    subtype: "mounts",
     name: "The Nautilus",
     desc: [
         "A large shelled cephalopod with a saddle.Anyone can ride it, and in doing so they gain the ability to breathe comfortably underwater.The nautilus has a swim speed of 20ft.",
@@ -56,6 +68,8 @@ const mounts = [{
 },
 {
     card: "7",
+    type: "vehicles",
+    subtype: "mounts",
     name: "The Pedestrian Pigeon",
     desc: [
         "This pigeon walks rather than flies.It cannot be “ridden” as such, but it can be trained to accept a creature as its “rider” with a successful DC 14 Animal Handling check and a loaf of high quality bread.Close inspection reveals that the pigeon’s wings are functional, and yet it walks through the air instead of flapping.",
@@ -66,6 +80,8 @@ const mounts = [{
 },
 {
     card: "8",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Alpha Blink dog",
     desc: [
         "A large, fey dog that is big enough to ride.It has a teleport speed of 30ft.and can take any creature riding it with it through teleportation.",
@@ -80,6 +96,8 @@ const mounts = [{
 },
 {
     card: "9",
+    type: "vehicles",
+    subtype: "mounts",
     name: "The Ghost Cube",
     desc: [
         "In life a regular, gelatinous creature, now the ghost cube wanders the corridors and shafts of its former home, unable to truly digest anything.However, a canny creature can use it as a means of easy transport, requiring that the creature learn the patrol route of the cube, and not be ethereal at the time.For the duration of travel, any creatures inside the cube treat it as difficult terrain, but can disembark at any time.",
@@ -90,15 +108,19 @@ const mounts = [{
 },
 {
     card: "10",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Robot Dinosaur",
     desc: [
         "A stegosaurus that has been constructed from metal plates and machine parts.Mounting the beast in order to ride it is tricky to say the least.",
         "The stegosaurus functions the same as its original stat block except that it has a + 3 bonus to AC and its tail deals an additional 1d6 damage on a critical hit.",
-        "Each of the plates on its back can be removed and replaced, each one functions as a + 1 magic shield, but anyone can replace them with a magic shield of another type.If a new magic shield is placed into the back of the stegosaurus, it attunes to it instantly, and will remain attuned to it while it remains in place.",
+        "Each of the plates on its back can be removed and replaced, each one functions as a + 1 magic shield, but anyone can replace them with a magic shield of another subtype.If a new magic shield is placed into the back of the stegosaurus, it attunes to it instantly, and will remain attuned to it while it remains in place.",
     ]
 },
 {
     card: "Page",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Askalotl",
     desc: [
         "This creature has the body of a lion, the wings of an eagle, and the head, gills, and tail of an axolotl.Upon encountering the creature it poses three riddles, requiring either an answer or respectively:",
@@ -111,6 +133,8 @@ const mounts = [{
 },
 {
     card: "Knight",
+    type: "vehicles",
+    subtype: "mounts",
     name: "The Optimimic",
     desc: [
         "Not a true mimic but a fey shapeshifter that attempts to replicate creature’s it sees.Under the control of a charismatic creature(Cha 17 or higher) it can adopt any single form and one strange aberration attached such as a horse with crab claws, or a hawk with centipede legs.",
@@ -119,6 +143,8 @@ const mounts = [{
 },
 {
     card: "Queen",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Floaty Mammoth",
     desc: [
         "Somehow, this mammoth appears perfectly capable of flight despite its size.Its tusks are oddly aerodynamic, its fur seems to almost hover off the beast’s body, and even on land it seems agile and light.Nevertheless, it is shrouded in a strange melancholy.",
@@ -129,6 +155,8 @@ const mounts = [{
 },
 {
     card: "King",
+    type: "vehicles",
+    subtype: "mounts",
     name: "Horse With No Name",
     desc: [
         "The Horse with No Name is immune to magic, and does not need to eat, drink, or sleep.",
@@ -138,10 +166,11 @@ const mounts = [{
         "If you attempt to cast Identify or Legend Lore on the Horse with No Name, roll a Wisdom saving throw(DC 15), on a failure you gain a form of long - term madness if you cast Identify, or indefinite madness if you cast Legend Lore.",
         "If the Horse dies, you forget that fact within 24 hours, and the Horse returns to life in the middle of the nearest desert.You will never see it again.",
     ]
-}
-]
-const land = [{
+},
+{
     card: "Ace",
+    type: "vehicles",
+    subtype: "land",
     name: "Spring Staff",
     desc: ["This staff can be used as a magical focus. You can cast the spell Jump at will. Whenever you cast a spell roll 1d10. If the result is equal to or less than the level of the spell you cast, you begin bouncing erratically. You jump 10ft in a random direction at the start of each of your turns, can only use your move action to bounce up to 30ft in a random direction, and cannot benefit from any kind of cover.",
         "If you are under the random bouncing effect while underneath a hard surface less than 10ft overhead, you take 1d6 damage each time you move 10ft or more."
@@ -149,11 +178,15 @@ const land = [{
 },
 {
     card: "2",
+    type: "vehicles",
+    subtype: "land",
     name: "The Clockwork Bear",
     desc: ["This bear has a key in its back and cymbals in its hands. It has an overland speed of 30ft and can be ridden by up to three creatures to a distance of 1 mile per turn. Each turn of the key tenses the spring. When you have wound the bear, roll 1d100, if the result is equal to or less than the number of turns the bear has received this trip, it becomes a polar bear with resistance to b/p/s and attacks everything within reach."]
 },
 {
     card: "3",
+    type: "vehicles",
+    subtype: "land",
     name: "Mountain Bike",
     desc: [
         "This bicycle has a climb speed of 40ft and has spider climb.Any creature riding it does not feel the effect of gravity while mounted.",
@@ -162,6 +195,8 @@ const land = [{
 },
 {
     card: "4",
+    type: "vehicles",
+    subtype: "land",
     name: "Monster Truck",
     desc: [
         "This horseless carriage has a metallic grill at the front that can be used to ram into Huge or smaller creatures, doing 2d8 slashing damage on a hit.",
@@ -178,6 +213,8 @@ const land = [{
 },
 {
     card: "5",
+    type: "vehicles",
+    subtype: "land",
     name: "The Chariot Rose",
     desc: [
         "Both wheels of this chariot are marked with the cardinal directions, with a prominent spoke pointing north.The chariot can be tipped on its side at any time to grant advantage on Wisdom(survival) checks made to determine direction.",
@@ -186,6 +223,8 @@ const land = [{
 },
 {
     card: "6",
+    type: "vehicles",
+    subtype: "land",
     name: "Creeping Carpet",
     desc: [
         "A 15x20ft.carpet made of fine fabrics.When the command word is spoken the tassels curve and lift the carpet as if they were a thousand tiny legs, transporting itself and anyone seated upon it to a named destination.The carpet has a land speed of 150ft and ignores difficult terrain.Any creature on the carpet when it starts moving must succeed on a DC 15 Dexterity save or fall off.Any creature in front of the carpet as it moves must succeed on a DC 15 Dexterity save or fall onto it and be taken wherever it is going."
@@ -193,6 +232,8 @@ const land = [{
 },
 {
     card: "7",
+    type: "vehicles",
+    subtype: "land",
     name: "The Mushroom Path",
     desc: [
         "A rod of birchwood covered in fungus that can be used to project a 5ft wide path of rapidly growing mushrooms, each of which is brightly coloured and capable of not only supporting the weight of Medium sized creatures but also causes them to bounce along the ground.Your travel time is halved, and your jump distance and height are tripled so long as you travel the mushroom path."
@@ -200,15 +241,19 @@ const land = [{
 },
 {
     card: "8",
+    type: "vehicles",
+    subtype: "land",
     name: "Sleigh of the Blood Pack",
     desc: [
-        "While you are mounted on this sleigh you have advantage on perception checks made to smell.In addition you can determine what types of creatures are present within a 1 mile radius(i.e.dragons, humanoids, elementals and so on) but not your distance to them or their direction.",
+        "While you are mounted on this sleigh you have advantage on perception checks made to smell.In addition you can determine what subtypes of creatures are present within a 1 mile radius(i.e.dragons, humanoids, elementals and so on) but not your distance to them or their direction.",
         "Furthermore you can spend 10 minutes trying to identify what creatures have passed through an area 1 mile in radius in the last 24 hours.",
         "3 / day you can cast Conjure Animals, summoning only 8 jackals, mastiffs, or wolves, or 2 dire wolves.These creatures will act as your allies in combat, and are also capable of pulling the sleigh if no other pack creatures are available to you.",
     ]
 },
 {
     card: "9",
+    type: "vehicles",
+    subtype: "land",
     name: "Chariot of Blades",
     desc: [
         "This chariot can move through the spaces of Medium or smaller creatures.If it does, those creatures must succeed on a Dexterity saving throw (DC 16) or begin bleeding.A bleeding creature takes 1d6 damage at the start of each of its turns.A medicine check(DC 14) or magical healing of any kind ends the bleeding effect."
@@ -216,6 +261,8 @@ const land = [{
 },
 {
     card: "10",
+    type: "vehicles",
+    subtype: "land",
     name: "Crawling Castle",
     desc: [
         "This fortified structure is the size of an average castle, containing the following principle areas:",
@@ -233,6 +280,8 @@ const land = [{
 },
 {
     card: "Page",
+    type: "vehicles",
+    subtype: "land",
     name: "The Convoy",
     desc: [
         "This train of carts, wagons, and travelling huts frequently appears to those in most need, and friendly faces are often willing to take people where they need to go.The journey will take 1 week no matter the distance, and will pass through strange locations that are recognised by no one who is not already in the convoy.",
@@ -247,6 +296,8 @@ const land = [{
 },
 {
     card: "Knight",
+    type: "vehicles",
+    subtype: "land",
     name: "The Tortoise",
     desc: [
         "A heavily armoured cart that weighs far more than any beast of burden could draw.Instead the cart propels itself on stocky legs of metal and woodfibre.The Tortoise has an armour class of 25, resistance to bludgeoning, piercing, and slashing damage, and ignores any damage taken below 20 from a single source.",
@@ -256,6 +307,8 @@ const land = [{
 },
 {
     card: "Queen",
+    type: "vehicles",
+    subtype: "land",
     name: "Train of Thought",
     desc: [
         "The train has only a few miles of track scattered erratically around the material plane, mostly in areas where there has been high psychic activity.The ruins of mindflayer hideouts have often been found to have a station standing completely isolated, long after the illithids have gone.",
@@ -266,14 +319,18 @@ const land = [{
 },
 {
     card: "King",
+    type: "vehicles",
+    subtype: "land",
     name: "The Grey Worm",
     desc: [
         "A gigantic metal cylinder built in segments, its front end is a vast rock - churning drill.The worm requires a crew of ten creatures, has the statistics of a purple worm, and is not impeded by rock, metal, or any other hard material.",
         "While the worm is being driven it gathers any precious materials in its way.After 10 minutes roll 1d20.If the amount is equal to or less than the amount of times you have rolled this way, a random treasure appropriate for a 14th level party appears in the worm’s cargo hold.",
     ]
-}]
-const water = [{
+},
+{
     card: "Ace",
+    type: "vehicles",
+    subtype: "water",
     name: "The Boogie Board",
     desc: [
         "This panel of floating material can be used with a successful DC 12 Dexterity check (acrobatics) to travel at 60ft per round across the surface of any body of water within 200ft of a coastline.",
@@ -282,6 +339,8 @@ const water = [{
 },
 {
     card: "2",
+    type: "vehicles",
+    subtype: "water",
     name: "A Sieve",
     desc: [
         "To ride in the sieve a creature must have a Wisdom score of 8 or lower. Up to three creatures can ride in the sieve at a time.",
@@ -290,6 +349,8 @@ const water = [{
 },
 {
     card: "3",
+    type: "vehicles",
+    subtype: "water",
     name: "Siren’s Wings",
     desc: [
         "A pair of wings that can be ridden across the surface of water at a speed of 60ft., hovering approximately 5ft above the surface at all times.",
@@ -298,6 +359,8 @@ const water = [{
 },
 {
     card: "4",
+    type: "vehicles",
+    subtype: "water",
     name: "The Umbrella (Inverted)",
     desc: [
         "The umbrella is large enough to seat up to 3 people, has a swim speed of 20ft above water, and prevents all damage or potential harm that could come to its occupants as a result of water events such as storms, waterfalls, spouts, or any other similar phenomena. It is less than useless against creature attacks, and somehow only makes you wetter if it rains.",
@@ -305,6 +368,8 @@ const water = [{
 },
 {
     card: "5",
+    type: "vehicles",
+    subtype: "water",
     name: "The Dugout",
     desc: [
         "A kayak that glides through water as effortlessly and soundlessly as a crocodile. While you are in the kayak you have advantage on stealth checks, and are considered lightly obscured from creatures on dry land. The paddle counts as a rogue weapon for the purposes of administering sneak attack damage.",
@@ -312,6 +377,8 @@ const water = [{
 },
 {
     card: "6",
+    type: "vehicles",
+    subtype: "water",
     name: "Ice-Breaker Hull",
     desc: [
         "The hull of this ship contains a small fire spirit that can be agitated on a whim. The prow cuts through ice without any hindrance and the ship can travel at full speed through icy water.",
@@ -321,6 +388,8 @@ const water = [{
 },
 {
     card: "7",
+    type: "vehicles",
+    subtype: "water",
     name: "Marrow Boat",
     desc: [
         "A seed that grows over the course of 24 days into a ship when planted within 10ft of any body of water. The boat ripens as it approaches its intended destination before falling gently to pieces. The boat is edible, providing sustenance for the entire journey, and upon completion of its trip, leaves behind a single, viable seed.",
@@ -328,6 +397,8 @@ const water = [{
 },
 {
     card: "8",
+    type: "vehicles",
+    subtype: "water",
     name: "Coin-operated boat",
     desc: [
         "This ship has a strange artificial gloominess about it, as if it were built by someone attempting to make it seem creepy. There is an automaton at one end with a face shaped into that of a skull with a visible slot between its front teeth. Players may announce their destination and pay the fee that the automaton announces:",
@@ -337,6 +408,8 @@ const water = [{
 },
 {
     card: "9",
+    type: "vehicles",
+    subtype: "water",
     name: "Ship in a Bottle",
     desc: [
         "A full-sized ship in a vast glass bottle. This ship maintains a steady supply of air even when fully submerged. The ship can be changed at any time, a process taking no less than 1 month of dedicated work, replacing the contents with a ship of your choosing.",
@@ -346,6 +419,8 @@ const water = [{
 
 {
     card: "10",
+    type: "vehicles",
+    subtype: "water",
     name: "The Black Lantern",
     desc: [
         "A two-person craft that requires both parties to pedal for the propulsion to work. The vessel is in the shape of a toothy fish with a lantern hanging above its mouth.",
@@ -356,6 +431,8 @@ const water = [{
 },
 {
     card: "Page",
+    type: "vehicles",
+    subtype: "water",
     name: "The Scuttlefish",
     desc: [
         "This submersible vehicle is 200ft long and has a swim speed of 120ft. It has been fashioned in the likeness of a kuotoa god whose name is long forgotten, even to those who could pronounce it.",
@@ -366,6 +443,8 @@ const water = [{
 },
 {
     card: "Knight",
+    type: "vehicles",
+    subtype: "water",
     name: "Staff of the Desert Prophet",
     desc: [
         "This quarterstaff can be used to cast the spell Destroy Water three times per day. Alternatively a creature may expend all three uses to create a space within a body of still or running water that can be travelled on foot, choosing one of the following effects:",
@@ -375,6 +454,8 @@ const water = [{
 },
 {
     card: "Queen",
+    type: "vehicles",
+    subtype: "water",
     name: "The Dragon Boat",
     desc: [
         "This longship can hold up to 100 medium sized creatures, and has a natural swimming speed of 30ft without a crew. Furthermore, the boat can walk across land at a speed of 30ft.",
@@ -384,17 +465,20 @@ const water = [{
 },
 {
     card: "King",
+    type: "vehicles",
+    subtype: "water",
     name: "Mother Hydra",
     desc: [
-        "A five mast galleon with the figurehead of a five-headed hydra. Each head of the hydra is a cannon that fires a 180ft line of a damage type (acid, cold, fire, lightning and poison respectively), each one deals 5d10 damage, and twice as much to vehicles.",
+        "A five mast galleon with the figurehead of a five-headed hydra. Each head of the hydra is a cannon that fires a 180ft line of a damage subtype (acid, cold, fire, lightning and poison respectively), each one deals 5d10 damage, and twice as much to vehicles.",
         "Each time Mother Hydra takes damage it grows a new addition, such as a forecastle, a new mast, a store, a new crane, a fishing boom, or some other new accessory or addition to its size.",
         "Mother Hydra at this time has 4 levels, a crew capacity of 500, 32 cannons per side and 8 in the fore and aft each, a two level aftcastle, a 1 level forecastle, and can carry up to 200 tonnes of goods in addition to its crew supplement.",
     ]
-}]
-
-const air = [{
+},
+{
 
     card: "Ace",
+    type: "vehicles",
+    subtype: "air",
     name: "Screaming Bird",
     desc: [
         "This airbladder has a bundle of feathers attached at the nozzle end. When fully inflated and released the Screaming Bird emits a high pitched scream that can be heard for 200ft. Any creature holding the Bird flies 2d100ft in a random direction.",
@@ -403,6 +487,8 @@ const air = [{
 },
 {
     card: "2",
+    type: "vehicles",
+    subtype: "air",
     name: "The Line",
     desc: [
         "Two posts of different lengths and a simple handle. Placing both posts upright and affixed to the ground, a creature holding onto the handle flies in a straight line from the taller post to the shorter. Both posts must be on the same plane of existence, and the creature never touches the ground while holding the handle.",
@@ -411,6 +497,8 @@ const air = [{
 },
 {
     card: "3",
+    type: "vehicles",
+    subtype: "air",
     name: "Magic Mop",
     desc: [
         "The mop has a flight speed of 120ft and a swim speed of 60ft. While underwater you are encapsulated in a breathable bubble that lasts for 2 hours, but bursts if you submerge below 1 mile beneath the water’s surface.",
@@ -418,6 +506,8 @@ const air = [{
 },
 {
     card: "4",
+    type: "vehicles",
+    subtype: "air",
     name: "Sky Snake",
     desc: [
         "A 100ft serpent made out of painted wood, held aloft by wings of many colours. To mount the Sky Snake a creature only needs to stand underneath it and hope to catch a ride.",
@@ -427,6 +517,8 @@ const air = [{
 },
 {
     card: "5",
+    type: "vehicles",
+    subtype: "air",
     name: "Aarakocra Wings",
     desc: [
         "A pair of feathered wings that must be flapped by hand in order to achieve a flight speed equal to twice your Strength score.",
@@ -435,6 +527,8 @@ const air = [{
 },
 {
     card: "6",
+    type: "vehicles",
+    subtype: "air",
     name: "Bleeding Feather Skiff",
     desc: [
         "A fast moving, small airship that can turn faster than a bird on the wing. The airship grants a +4 bonus to Dexterity saves to all creatures on board.",
@@ -443,6 +537,8 @@ const air = [{
 },
 {
     card: "7",
+    type: "vehicles",
+    subtype: "air",
     name: "The Owlblimp",
     desc: [
         "A childish facsimile of an owlbear made into a large inflatable, which is attached to a simple cart by rope. Up to 8 creatures can ride in the cart.",
@@ -452,6 +548,8 @@ const air = [{
 },
 {
     card: "8",
+    type: "vehicles",
+    subtype: "air",
     name: "It Came With a Chair",
     desc: [
         "A scroll bearing an invocation in a blasphemous language that must be spoken with two mouths beneath a blackened sun. When uttered, a tendril of monstrous size belonging to an unknowable entity descends with an extravagant chair resting in its coils.",
@@ -461,6 +559,8 @@ const air = [{
 },
 {
     card: "9",
+    type: "vehicles",
+    subtype: "air",
     name: "Cloud of Plenty",
     desc: [
         "This permanent cloud formation contains an invisible solid surface approximately 100x30ft. that can be stood upon and controlled like a ship from a small podium that resembles a short pillar of frost. The cloud will frequently create small piles of food and water, both on board and -while the cloud is in flight -underneath, causing small deluges of food. The food offered by the cloud can be changed by planting seeds in the invisible surface.",
@@ -469,6 +569,8 @@ const air = [{
 },
 {
     card: "10",
+    type: "vehicles",
+    subtype: "air",
     name: "Wild Hunter’s Sled",
     desc: [
         "Requiring nothing more than a tame animal to draw the sled, it can move at a flight speed of 180ft., and it comes equipped with the following special features:",
@@ -481,6 +583,8 @@ const air = [{
 },
 {
     card: "Page",
+    type: "vehicles",
+    subtype: "air",
     name: "Hummingbird Feather Cap",
     desc: [
         "A bycoket adorned with a spectrum of bright feathers. At a command the feathers whir into life lifting you off the ground. You gain a flight speed of 20ft, advantage on Dexterity saves while airborne, and you are considered under the effects of the Haste spell at all times. If you use the power of the hat for 10 minutes, you gain a level of exhaustion every 10 minutes. These levels are removed via a long rest, or by consuming a large amount of high-sugar content foods.",
@@ -488,6 +592,8 @@ const air = [{
 },
 {
     card: "Knight",
+    type: "vehicles",
+    subtype: "air",
     name: "Paper Plane",
     desc: [
         "A single A4 sheet of off-white paper, it bears small marks of ink as though words were once on the page but have faded away, and creases across its surface suggest that it has been used as a paper plane on several occasions.",
@@ -497,6 +603,8 @@ const air = [{
 },
 {
     card: "Queen",
+    type: "vehicles",
+    subtype: "air",
     name: "Fortified Cape",
     desc: [
         "This cape resembles the crenelations of a castle’s defensive walls. It can be removed and cast out to create a small tower made of the same delicate fabric of the cape. The tower can be directed to fly in any direction, carrying up to 10 Medium creatures inside.",
@@ -506,8 +614,11 @@ const air = [{
 },
 {
     card: "King",
+    type: "vehicles",
+    subtype: "air",
     name: "Dragonblimp",
-    desc: ["The figurehead of this inflatable ship is in the form of a dragon with jaws agape, threatening terrible destruction upon all who approach. The blimp has a breath weapon akin to an adult dragon, and resistance to a damage type. Both are dependent on the fuel that the blimp is given:",
+    type: "vehicles",
+    desc: ["The figurehead of this inflatable ship is in the form of a dragon with jaws agape, threatening terrible destruction upon all who approach. The blimp has a breath weapon akin to an adult dragon, and resistance to a damage subtype. Both are dependent on the fuel that the blimp is given:",
         "Black - Humanoid corpses (1/day) or carrion of triple the weight, and 1lb of saltpetre.",
         "Blue - Copper powder, up to 100 GP worth per day and the same in quartz crystals, or half as much if the materials were stolen.",
         "Green - Secrets whispered into the fuel tank, either those of the whisperer or those that it has learned, especially in the form of documents and journals. Exotic poisons worth up to 100 GP per day.",
@@ -518,20 +629,10 @@ const air = [{
     ]
 }]
 
-export const vehicleData = {
-    mounts,
-    land,
-    water,
-    air,
+import { outputJson } from './utils/dataParsing.js';
+outputJson("vehicles", vehicles);
 
+const collections = {
+    "documentType": "vehicles",
+    "collections": ["land", "air", "water", "mounts"]
 }
-
-/**
- {
-    card: "",
-    name: "",
-    desc: [
-        
-    ]
-}
- */
