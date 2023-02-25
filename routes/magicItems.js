@@ -1,60 +1,35 @@
 import { Router } from "express";
-
-import { magicItems } from "../data/magicItems.js";
-import { convertToHumanReadable, convertToCamelCase } from "../utils/stringManipulation.js";
+import { getAllItemsByType, getItemsBySubtype, getitemsByName, getSubtypes } from "../data/utils/get.js";
 
 const magicItemsRoute = Router();
 
-const getItemByName = name => {
-    const items = []
-    for (const magicItem in magicItems) {
-        magicItems[magicItem].forEach((item) => {
-            if (item.name.toLowerCase() === name.toLowerCase()) {
-                items.push(item);
-            }
-        })
-    }
-    return items;
-}
+const type = "magicItems";
 
-magicItemsRoute.get("/", (req, res) => {
+magicItemsRoute.get("/", async (req, res) => {
     const { name } = req.query;
     if (!name) {
-        res.json(magicItems);
+        const items = await getAllItemsByType(type);
+        res.json(items);
     } else {
-        const items = getItemByName(name);
+        const items = await getitemsByName(type, name)
         items ? res.json(items) : res.status(404).send(`${name} Not found`);
 
     }
 });
 
-magicItemsRoute.get("/type/:type", (req, res) => {
+magicItemsRoute.get("/type/:subtype", async (req, res) => {
+    const { subtype } = req.params
+    const items = await getItemsBySubtype(type, subtype);
 
-    const { type } = req.params
-    const items = magicItems[convertToCamelCase(type)];
-
-    if (items) {
-        res.json(items);
-    } else {
-        res.status(404).send(`${type} Not found`);
-    }
+    items ? res.json(items) : res.status(404).send(`${type} Not found`);
 
 });
 
 
-magicItemsRoute.get("/types", (req, res) => {
-    const namesArray = [];
-    for (const magicItem in magicItems) {
-        const humanReadable = convertToHumanReadable(magicItem);
-        namesArray.push(humanReadable);
-    }
+magicItemsRoute.get("/subtype", async (req, res) => {
+    const items = await getSubtypes(type)
+    items?.collections ? res.json({ types: items.collections }) : res.status(404).send(`${type} Not found`);
 
-
-    if (namesArray) {
-        res.json({ types: namesArray });
-    } else {
-        res.status(404).send(`${types} Not found`);
-    }
 });
 
 export default magicItemsRoute;
