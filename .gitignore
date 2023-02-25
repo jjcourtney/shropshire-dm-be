@@ -1,3 +1,6 @@
+# Bespoke files
+content_to_parse
+
 # Logs
 logs
 *.log

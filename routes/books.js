@@ -2,23 +2,23 @@
 import { Router } from "express";
 import { getAllItemsByType, getItemsBySubtype, getitemsByName, getSubtypes } from "../data/utils/get.js";
 
-const vehiclesRoute = Router();
+const booksRoute = Router();
 
-const type = "vehicles";
+const type = "books";
 
-vehiclesRoute.get("/", async (req, res) => {
+booksRoute.get("/", async (req, res) => {
     const { name } = req.query;
     if (!name) {
         const items = await getAllItemsByType(type);
         res.json(items);
     } else {
-        const items = await getitemsByName(type, name);
+        const items = await getitemsByName(type, name)
         items ? res.json(items) : res.status(404).send(`${name} Not found`);
 
     }
 });
 
-vehiclesRoute.get("/type/:subtype", async (req, res) => {
+booksRoute.get("/type/:subtype", async (req, res) => {
     const { subtype } = req.params
     const items = await getItemsBySubtype(type, subtype);
 
@@ -27,10 +27,10 @@ vehiclesRoute.get("/type/:subtype", async (req, res) => {
 });
 
 
-vehiclesRoute.get("/subtype", async (req, res) => {
+booksRoute.get("/subtype", async (req, res) => {
     const items = await getSubtypes(type)
     items?.collections ? res.json({ types: items.collections }) : res.status(404).send(`${type} Not found`);
 
 });
 
-export default vehiclesRoute;
+export default booksRoute;
